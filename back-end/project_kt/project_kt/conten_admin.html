@@ -1,0 +1,225 @@
+<style>
+.stat {
+	padding:20px 5px;
+	background:#336699;
+	text-align:center;
+	float:left;
+	margin-left:100px;
+	width:150px;
+}
+.stat-count {
+	font-size: 51px;
+	font-weight: normal;
+	letter-spacing: -0.02em;
+	line-height: 1.2;
+	margin-bottom: 20px;
+	overflow:hidden;
+	font-family:"Georgia", Courier, monospace;
+	padding: 0;
+	position: relative;
+}
+.stat-detail {
+	color:#fff;
+	padding-top:10px;
+	font: italic 1.3rem/1.75 "Georgia", Courier, monospace;
+}
+</style>
+<h1 style="text-align: center   ;">Statistics Analysis</h1>
+<script type="text/javascript">
+
+Highcharts.chart('container', {
+
+    title: {
+        text: 'Monthy growth'
+    },
+
+    subtitle: {
+        text: ''
+    },
+    yAxis: {
+        floor: 0,
+        ceiling: 200,
+        title: {
+            text: 'Order'
+        }
+    },
+    xAxis: {
+        title: {
+            text: 'Monthy'
+        }
+        ,categories: [
+            '0',
+            '1',
+            '2',
+            '3',
+            '4',
+            '5',
+            '6',
+            '7',
+            '8',
+            '9',
+            '10',
+            '11',
+            '12'
+        ]
+    },
+   
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 1
+        }
+    },
+
+    series: [{
+        name: 'Hair',
+        data: [40, 50, 60, 70, 95, 110, 125, 150,147,199,180,165]
+    }, {
+        name: 'Skin',
+        data: [11, 24, 25, 43, 44, 59, 80, 20, 47, 95, 101, 110]
+    }, {
+        name: 'Makeup Kits',
+        data: [20, 66, 27, 68, 88, 73, 96, 64,55,77,24,160]
+    }, {
+        name: 'Nail Paints',
+        data: [null, null, 50, 60, 17, 55, 44, 98,89,79,110,113]
+    }, {
+        name: 'Nail Arts',
+        data: [1, 5, 51, 43, 51, 96, 150, 120,100,119,145,190]
+    }, {
+        name: 'Jewellry',
+        data: [null, 54, 1, 32, 21, 76, 79, 53,100,158,134,179]
+    }, {
+        name: 'Wedding Kits',
+        data: [null, 5, 61, 23, 61, 16, 14, 120,114,118,174,159]
+    }, {
+        name: 'Upcoming Products',
+        data: [20, null, 41, 39, 41, 68, 104, 140,159,138,134,169]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 1500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+/* ----------------------- */
+Highcharts.chart('container1', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Product market in the year'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'Hair',
+            y: 50
+        }, {
+            name: 'Skin',
+            y: 18,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Nail Paints',
+            y: 7
+        }, {
+            name: 'Nail arts',
+            y: 4.77
+        }, {
+            name: 'Jewellru',
+            y: 0.93
+        }, {
+            name: 'Wedding Kits',
+            y: 3.38
+        }, {
+            name: 'Upcoming Products',
+            y: 6.33
+        }, {
+            name: 'Makeup Kits',
+            y: 6.03
+        }]
+    }]
+});
+/* -------------------------- */
+
+jQuery(document).ready(function() {
+     function count($this) {
+         var current = parseInt($this.html(), 10);
+         current = current + 1; /*Lấy giá trị hiện tại và + thêm 1 */
+         $this.html(++current); /*Nếu giá trị hiện tại lớn hơn giá trị bên trong class stat-count thì dừng lại*/
+    if(current > $this.data('count')){
+			$this.html($this.data('count'));
+		} else {
+			setTimeout(function(){count($this)}, 50);
+		}
+     }
+     jQuery(".stat-count").each(function() {
+         jQuery(this).data('count', parseInt(jQuery(this).html(), 10));
+         jQuery(this).html('0');
+         count(jQuery(this));
+     });
+ });
+</script>
+        <div class="col-sm-6 " >
+
+           <div id="container"></div>
+        </div>
+         <div class="col-sm-6 " >
+
+           <div id="container1"></div>
+        </div>
+        <!----->
+        <div class="stat">
+            <span class="stat-count">200</span>
+            <p class="stat-detail">Subscribers</p>
+        </div>
+        <!---->
+         <div class="stat">
+            <span class="stat-count">300</span>
+            <p class="stat-detail">View</p>
+        </div>
+        <!---->
+         <div class="stat">
+            <span class="stat-count">360</span>
+            <p class="stat-detail">follow</p>
+        </div>

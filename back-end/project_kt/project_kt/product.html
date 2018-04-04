@@ -1,0 +1,396 @@
+
+
+<a href="#" class="btn btn-primary btn-xs pull-left" id="add_category1" data-title="add_category" data-toggle="modal" data-target="#add_category"><b>+</b> Add new product</a>
+<table  class="table table-hover" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>stt</th>
+                <th>img</th>
+                <th>Name</th>
+                <th>category</th>
+                <th>price</th>
+                <th>date</th>
+                <th>status</th>
+                <th style="text-align: center;">action</th>
+            </tr>
+        </thead>
+        
+        <tbody id="product_list">
+        </tbody>
+    </table>
+    <!-- Modal add -->
+<div id="add_category" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add product</h4>
+      </div>
+      <div class="modal-body">
+      <form class="form-horizontal" role="form">
+        <fieldset>
+
+          <!-- Form Name -->
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">img</label>
+            <div class="col-sm-10">
+              <input type='file' id="imgInp" />
+              <div  style="border: 1px solid black;width:80px;height: 80px; " ><img id="blah" src="#" alt="your image" width="80px" height="80px"/></div>
+              
+
+            </div>
+          </div>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput" >Name</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Product Name" class="form-control" id="product_name" />
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Category</label>
+            <div class="col-sm-10" >
+                <select class="selectpicker" id="select_cate">
+              <!--<input type="text" placeholder="Address Line 2" class="form-control" id="" />-->
+                </select>;
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Price</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Price" id="price" class="form-control">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">date</label>
+            <div class="col-sm-4">
+              <input type="date" placeholder="State" class="form-control" id="datepicker"/>
+            </div>
+
+            <label class="col-sm-2 control-label" for="textinput" >status</label>
+            <div class="col-sm-4">
+              <select class="selectpicker" id="status">
+                    <option>show</option>
+                    <option>hidden</option>
+                </select>
+
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="pull-right">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="add_product">Save</button>
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+      </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Modal add -->
+<!--edittttttttttttttttttttttt-->
+<div id="edit" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">edit product</h4>
+      </div>
+      <div class="modal-body">
+      <form class="form-horizontal" role="form">
+        <fieldset>
+
+          <!-- Form Name -->
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">img</label>
+            <div class="col-sm-10">
+              <input type='file' id="imgInp1" />
+              <div  style="border: 1px solid black;width:80px;height: 80px; " ><img id="blah1" src="#" alt="your image" width="80px" height="80px"/></div>
+              
+
+            </div>
+          </div>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput" >Name</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Address Line 1" class="form-control" id="product_name1" readonly />
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Category</label>
+            <div class="col-sm-10" >
+                <select class="selectpicker" id="select_cate1">
+              <!--<input type="text" placeholder="Address Line 2" class="form-control" id="" />-->
+                </select>;
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Price</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="City" id="price1" class="form-control">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">date</label>
+            <div class="col-sm-4">
+              <input type="date" placeholder="State" class="form-control" id="datepicker1"/>
+            </div>
+
+            <label class="col-sm-2 control-label" for="textinput" >status</label>
+            <div class="col-sm-4">
+              <select class="selectpicker" id="status1">
+                    <option>show</option>
+                    <option>hidden</option>
+                </select>
+
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="pull-right">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="add_product1" onclick="editUserProduct($('#product_name1').val());">Save</button>
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+      </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Modal edit -->
+<script>
+  
+    
+   
+       
+    //chi cho nhap so
+    $('#price').keypress(function(event){
+
+               if(event.which != 8 && isNaN(String.fromCharCode(event.which))){
+                   event.preventDefault();
+               }
+        
+           }); 
+    //update file
+    function readURL(input) {
+    
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+    
+        reader.onload = function(e) {
+          $('#blah').attr('src', e.target.result);
+        }
+    
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+    
+    $("#imgInp").change(function() {
+      readURL(this);
+    }); 
+    
+    
+    /*----add product----*/
+   
+    $("#add_product").click(function(){
+        //localStorage.removeItem("product_tr"); xoa
+        var product_name = $("#product_name").val();
+        var select_cate = $("#select_cate").val();
+        var price = $("#price").val();
+        var datepicker = $("#datepicker").val();
+        var status = $("#status").val(); 
+        //alert(datepicker);
+        if(price !='' && product_name!='' )
+        { 
+            var pro_name = { "product_name":product_name,"select_cate":select_cate,"price":price,"datepicker":datepicker,"status":status};
+            
+            var storageProduct =localStorage.getItem("product_tr");
+            
+            if(storageProduct == undefined)
+            {
+                var objectProduct={};
+                 objectProduct["product_tr"] =[pro_name];
+                 console.log(objectProduct);
+                 objectProduct = JSON.stringify(objectProduct);
+                  localStorage.setItem('product_tr', objectProduct);
+                 alert("them dc  1 cai roi");
+                
+            }else
+            {
+                 var storageProduct = JSON.parse(storageProduct);
+                 var flag=0;
+                 for(var item in storageProduct['product_tr']) {
+                    
+				   if(storageProduct['product_tr'][item].product_name == product_name)
+				   {
+					 flag=1;
+					 break;
+				   }
+                }
+                if(flag!=1)
+               {
+                storageProduct['product_tr'].push(pro_name);
+                storageProduct = JSON.stringify(storageProduct);
+                localStorage.setItem("product_tr", storageProduct);
+				//alert("dang ky thanh cong roi2");
+                load_data2();
+               }else
+               {
+                alert("ton tai product nay roi");
+               }
+            }  
+        }else{
+            alert("code va name ko dc de trong");
+        }
+    });
+    /*----add product----*/
+    
+        /*---select categori and list product---*/
+    if (typeof(Storage) !== "undefined") {
+            // show user on storage                
+                var jsonStr = localStorage.getItem("category_tr");
+               // console.log(jsonStr);
+                var obj = JSON.parse(jsonStr);
+                var i =1;
+                for(var item in obj['category_tr']) {
+                    /*---select categori---*/
+                     $('#select_cate').append(function() {
+                           var cont_us= '<option>'+obj['category_tr'][item].category_name +'</option>';          
+                         return cont_us;
+                    });
+                     $('#select_cate1').append(function() {
+                           var cont_us= '<option>'+obj['category_tr'][item].category_name +'</option>';
+                         return cont_us;
+                    });
+               }
+                // show user on storage                
+                var jsonStrPr = localStorage.getItem("product_tr");
+                //console.log(jsonStrPr);
+                var obj1 = JSON.parse(jsonStrPr);
+                var i =1;
+                for(var item in obj1['product_tr']) {
+               /*---list product---*/
+                     $('#product_list').append(function() {
+                           var cont_us1= '<tr>'
+                                          + '<td>'+ i++ +'</td>'  
+                                          + '<td><img src="img.jpg" alt="Smiley face" height="42" width="42"></td>'  
+                                          + '<td>'+obj1['product_tr'][item].product_name+'</td>' 
+                                          + '<td>'+obj1['product_tr'][item].select_cate+'</td>' 
+                                          + '<td>'+obj1['product_tr'][item].price+'</td>' 
+                                          + '<td>'+obj1['product_tr'][item].datepicker+'</td>' 
+                                          + '<td>'+obj1['product_tr'][item].status+'</td>' 
+                                          + '<td class="text-center"><a class="btn btn-info btn-xs " id="'+obj1['product_tr'][item].product_name+'" href="#" data-title="edit" data-toggle="modal" data-target="#edit" onclick="geteditDetailProduct(this)"><span class="glyphicon glyphicon-edit" ></span> Edit</a> ' 
+                                          + '<a href="#" class="btn btn-danger btn-xs product_delete " id="'+obj1['product_tr'][item].product_name+'" onclick="deleteProduct(this)"><span class="glyphicon glyphicon-remove"></span> Del</a></td>' 
+                                          + '</tr>' ;
+                                        
+                                        
+                         return cont_us1;
+                    }); 
+             }
+    
+    }
+    /*-----edit detail------*/
+    function geteditDetailProduct(data){
+        
+        var jsonStr = localStorage.getItem("product_tr");
+        var obj = JSON.parse(jsonStr);
+         for(var item in obj['product_tr']) {
+            
+            if(obj['product_tr'][item].product_name==$(data).attr("id")){
+                
+               $("#product_name1").val(obj['product_tr'][item].product_name);
+               $("#select_cate1").val(obj['product_tr'][item].select_cate);
+               $("#price1").val(obj['product_tr'][item].price);
+               $("#datepicker1").val(obj['product_tr'][item].datepicker);
+               $("#status1").val(obj['product_tr'][item].status);
+            }
+         }
+    }
+     /*-----edit detail------*/
+     //edit product
+        function editUserProduct(data)
+        {
+            var jsonStr = localStorage.getItem("product_tr");
+            var obj = JSON.parse(jsonStr);
+            //alert(data);
+             for(var item in obj['product_tr']) {
+                        //alert(obj['product_tr'][item].product_name);
+                    if(obj['product_tr'][item].product_name==data){
+                        
+                        obj['product_tr'][item].product_name=$("#product_name1").val();
+                        obj['product_tr'][item].select_cate=$("#select_cate1").val();
+                        obj['product_tr'][item].price=$("#price1").val();
+                        obj['product_tr'][item].datepicker=$("#datepicker1").val();
+                        obj['product_tr'][item].status=$("#status1").val();
+                        
+                        var jsonStr1 = JSON.stringify(obj);
+                        localStorage.setItem("product_tr", jsonStr1);
+                        }
+                }
+                load_data2();
+        }
+            //delete category
+    $(".product_delete").click(function(){
+        //localStorage.removeItem("category_new"); //xoa
+         var id=$(this).attr("id");
+        if(confirm("muon xoa khong") ==true)
+        {
+            var jsonStr = localStorage.getItem("product_tr");
+            var obj = JSON.parse(jsonStr);
+            
+            for (i=0;i<obj['product_tr'].length;i++){
+                
+                if (obj['product_tr'][i].product_name == id) 
+                {
+                    obj['product_tr'].splice(i,1);
+                    localStorage["product_tr"] = JSON.stringify(obj);
+                    load_data2();
+                }
+            }
+        }
+        
+        
+    });
+    //load data
+      function load_data2()
+        {
+            $.ajax({
+                url:"product.html",
+                method:"GET",
+                dataType: "html",
+                success:function(data){
+                    $('#div_user').html(data);        
+                }
+            })
+        } 
+</script>    

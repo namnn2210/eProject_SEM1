@@ -1,0 +1,406 @@
+@charset "utf-8";
+/* CSS Document */
+/* Font */
+
+@font-face {
+   font-family: futura;
+   src:url(../../fonts/futura%20light%20bt.ttf);
+}
+
+
+/* Body */
+
+body {
+	font-family:futura;
+}
+
+/* Header */
+
+.navbar {
+	background-color:white;
+	border:none;
+}
+
+.navbar-nav {
+	margin-left: 25%;	
+}
+
+.nav1 a, .nav2 a, .nav3 a, .nav4 a, .nav5 a, .nav6 a {
+	font-size: 25px;	
+}
+
+
+header .collapse .navbar-nav li a:hover {
+	color:#CEA08A;
+}
+
+.button-cart {
+	border: none;
+    background-color: transparent;
+}
+
+#overlay {
+	position:fixed;
+	display:none;
+	width:100%;
+	height:100%;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 2;
+    cursor: pointer;
+}
+#navigation{
+	margin-right: 15%;
+}
+.cartCount{
+	background-color: lightblue;
+	width: 15px;
+	height: 25px;
+	text-align: center;
+	padding-top: 10%;
+	border-radius: 10px;
+}
+#clicks{
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	font-size: 12px;
+}
+.cart{
+	margin: 4% 0% 0% -3%;
+}
+
+/* Slider */
+.slider-title {
+    position: absolute;
+    top: 60%;
+    left: 35%;
+}
+
+.txt1 {
+	font-size:35px;	
+}
+.txt2 {
+	font-size:50px;	
+}
+.txt3 {
+	font-size:30px;	
+}
+
+
+
+/* Introduction */
+.introduction {
+	margin-top:3%;	
+}
+
+.intro-img-1-title{
+	position: absolute;
+    top: 38%;
+    left: 28%;
+    font-size: 30px;
+    color: white;	
+}
+
+.intro-img-2-title {
+	position: absolute;
+    top: 40%;
+    left: 35%;
+    font-size: 30px;	
+}
+
+.intro-txt3, .intro-txt6, .txt3, .main-txt3 a, .main-txt7 a {
+	text-decoration:none;	
+}
+
+.intro-txt3 a {
+	color:white;	
+}
+
+.intro-txt3:hover, .intro-txt6:hover, .txt3:hover, .main-txt3 :hover, .main-txt7 a:hover  {
+	color:#CEA08A;	
+}
+
+.intro-txt6 a, .txt3 a, .main-txt3 a, .main-txt7 a {
+	color:black;	
+}
+
+
+
+/* Trending */
+
+.trending {
+	margin-top:3%;	
+}
+
+.trending-1 img, .trending-2 img, .trending-3 img { 
+	width:100%;
+}
+
+.trending-1-title p{
+	position: absolute;
+    top: 10%;
+    left: 38%;
+    font-size: 40px;
+}
+
+.trending-2-title p {
+	position: absolute;
+    top: 8%;
+    left: 35%;
+    font-size: 40px;	
+}
+
+.trending-3-title p {
+	position: absolute;
+    top: 10%;
+    left: 40%;
+    font-size: 40px;	
+}
+
+
+
+/* Main */
+
+.main {
+	margin-top:3%;	
+}
+
+.main-1-title {
+	position: absolute;
+    top: 40%;
+    left: 20%;
+    font-size: 30px;	
+}
+
+.main-2-title {
+	position: absolute;
+    top: 40%;
+    left: 10%;
+    font-size: 30px;	
+}
+
+.main-txt4, .main-txt5, .main-txt6, .main-txt7 a {
+	color:white;	
+}
+
+
+/* Upcoming */
+.upcoming {
+	padding-top:3%;	
+}
+
+.item1-title, .item2-title, .item3-title, .item4-title, .item5-title, .item6-title, .item7-title, .item8-title {
+	font-size:20px;	
+}
+
+/* PR */
+.pr, footer {
+	margin-top:5%;	
+}
+
+.pr1, .pr2 {
+	border-right:1px solid grey;	
+}
+
+/* Footer */
+
+footer {
+	border-top:1px solid black;	
+	font-size:17px;
+}
+
+.footer1 {
+	margin-top:4%;
+}
+
+.text4 a {
+	text-decoration:none;
+	color:black;
+}
+
+/* Subscription */
+.subscription {
+	padding: 0 3% 3% 1%;
+}
+
+.subscribe-text {
+	margin-top: 60px;
+}
+
+.subscribe-input {
+	margin-top:20px;	
+}
+
+
+.email-textbox {
+	border:none;
+	width:230px;
+	height:40px;	
+}
+
+.email-textbox, .email-button {
+	display:inline-block;	
+}
+
+.email-button {
+	margin-left:5px;
+	width:230px;
+	height:40px;
+	border-width:1px;
+	background-color:transparent;
+	border-color:black;
+}
+
+.input1 {
+	border-bottom:1px solid black;	
+}
+
+/* Others */
+.text5 {
+	text-decoration:none;
+	color:black;	
+}
+
+
+@media screen and (max-width:992px) {
+	.navbar-nav {
+		margin-left: 10%;	
+	}
+	
+	.mainSlider {
+		margin-top:30%;	
+	}
+	
+	.slider-title {
+		top: 40%;
+    	left: 15%;
+	}
+	
+	.intro-img-1-title {
+		top: 40%;
+    	font-size: 30px;
+    	left: 30%;	
+	}
+	
+	.intro-img-2-title {
+		font-size: 25px;
+    	top: 28%;
+    	left: 86%;	
+	}
+	
+	.intro-img-2 img {
+		width: 206%;
+    	margin-top: 7%;	
+	}
+	
+	.trending-1-title p, .trending-2-title p, .trending-3-title p {
+		font-size: 25px;	
+	}
+	
+	.main-1-title {
+		left: 13%;
+    	font-size: 20px;
+	}
+	
+	.main-2-title {
+		top: 25%;	
+		font-size: 20px;
+	}
+	
+	.pr1, .pr2 {
+	border:none;	
+	}
+	
+	.pr row .pr1 img {
+		position: relative;
+    	left: 40%;	
+	}
+
+
+@media screen and (max-width:768px) {
+
+	.mainSlider {
+		margin-top:50%;	
+	}
+	
+	.slider-title {
+    	top: 31%;
+    	left: 25%;
+	}
+	
+	.txt1 {
+	font-size:17px;	
+	}
+	.txt2 {
+	font-size:17px;	
+	}
+	.txt3 {
+	font-size:15px;	
+	}
+	
+	.intro-img-1-title {
+    	top: 30%;
+    	left: 25%;	
+		font-size: 20px;
+	}
+	
+	.intro-img-2 img {
+		width:100%;
+		margin-top: 3%;	
+	}
+	
+	.intro-img-2-title {
+		left: 30%;	
+	}
+	
+	.trending-1-title p, .trending-2-title p, .trending-3-title p {
+		font-size: 35px;	
+	}
+	
+	.trending-1-title p {
+		left:37%;	
+	}
+	
+	.trending-2-title p {
+		left:35%;	
+	}
+	
+	.trending-3-title p {
+		left:41%;	
+	}
+	
+	.main-1-title {
+		left: 25%;	
+	}
+	
+	.main-2-title {
+		top: 25%;
+	}
+	
+	.main-txt4 {
+		font-size:17px;
+	}
+	
+	.main-txt5 {
+		font-size:17px;
+	}
+	
+	.main-txt6 {
+		font-size:17px;
+	}
+	
+	.main-txt7 {
+		font-size:17px;
+	}
+	
+	.pr1, .pr2 {
+	border:none;	
+	}
+}
+
+
+

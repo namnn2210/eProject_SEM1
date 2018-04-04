@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sitemap</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="../css/Homepage.css" type="text/css"/>
+<link href="../css/animate.min.css" rel="stylesheet">
+<link href="../css/bootstrap-dropdownhover.min.css" rel="stylesheet">
+<script src="../js/bootstrap-dropdownhover.min.js"></script>
+<style type="text/css">
+	.sitemap {
+		margin-top:15%;	
+	}
+	
+	.col1 {
+		border-left: 1px solid black;	
+	}
+	
+	body {
+		font-size:17px;	
+	}
+	
+@media screen and (max-width:768px) {
+	.sitemap {
+		margin-top:31%;
+	}
+}
+</style>
+</head>
+
+<body>
+<header>
+	<nav class="navbar navbar-default">
+    	<div class="logo text-center">
+    		<a href="../Index.html"><img src="../Images/Logo/logo.png" width="150" height="150"/></a>
+    	</div>
+    	<div class="container">
+        	<div class="navbar-header">
+            	<button class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            	</button>
+            </div>
+            <div class="collapse navbar-collapse" id="navigation">
+            	<ul class="nav navbar-nav">
+                	<li class="nav1"><a href="../Index.html" style="color:#CEA08A">Home</a></li>
+                    <li class="nav2 dropdown">
+                    	<a class="dropdown-toggle" data-toggle="dropdown"  data-hover="dropdown" data-animations="zoomIn" href="Shop Pages/Wedding Kits - Copy (2).html">Shop</a>
+                        <ul class="dropdown-menu">
+                        	<li><a href="Shop Pages/Hair.html">Hair</a></li>
+                            <li><a href="Shop Pages/Skin.html">Skin</a></li>
+                            <li><a href="Shop Pages/Makeup Kits.html">Makeup Kits</a></li>
+                            <li><a href="Shop Pages/Nail Paints.html">Nail Paints</a></li>
+                            <li><a href="Shop Pages/Nail Arts.html">Nail Arts</a></li>
+                            <li><a href="Shop Pages/Jewellry.html">Jewellry</a></li>
+                            <li><a href="Shop Pages/Wedding Kits.html">Wedding Kits</a></li>
+                            <li><a href="Shop Pages/Wedding Kits - Copy.html">Upcoming Products</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav3"><a href="Gallery + Feedback + Contact + About/Gallery.html">Gallery</a></li>
+                    <li class="nav4"><a href="Gallery + Feedback + Contact + About/about.html">About</a></li>
+                    <li class="nav5"><a href="Gallery + Feedback + Contact + About/contact.html">Contact</a></li>
+                    <li class="nav6"><a href="Gallery + Feedback + Contact + About/feedsback.html">Feedback</a></li>
+                    <li class="nav7">
+                		<a href="Shopping Cart.html"><button class="button-cart"><img src="../Images/Others/Shopping-Cart-10.png" width="30" height="30"/></button></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container sitemap">
+	<h1>Sitemap</h1>
+    <div class="row">
+    	<div class="col-lg-3 col-md-3 col-sm-3">
+        	<p class="text4"><a href="../Index.html" style="color:#CEA08A">Home</a></p>
+            <p class="text4"><a href="Shop Pages/Wedding Kits - Copy (2).html">Shop</a></p>
+            <p class="text4"><a href="Gallery + Feedback + Contact + About/Gallery.html">Gallery</a></p>
+            <p class="text4"><a href="Gallery + Feedback + Contact + About/about.html">About</a></p>
+            <p class="text4"><a href="Gallery + Feedback + Contact + About/contact.html">Contact</a></p>
+            <p class="text4"><a href="Gallery + Feedback + Contact + About/feedsback.html">Feedback</a></p>
+        </div>
+        
+        <div class="col-lg-3 col-md-3 col-sm-3 col1">
+        	<p class="text4"><a href="Shop Pages/Wedding Kits - Copy (2).html" style="color:#CEA08A">Shop</a></p>
+            <p class="text4"><a href="Shop Pages/Hair.html">Hair</a></p>
+            <p class="text4"><a href="Shop Pages/Skin.html">Skin</a></p>
+            <p class="text4"><a href="Shop Pages/Makeup Kits.html">Makeup Kits</a></p>
+            <p class="text4"><a href="Shop Pages/Nail Paints.html">Nail Paints</a></p>
+            <p class="text4"><a href="Shop Pages/Nail Arts.html">Nail Arts</a></p>
+            <p class="text4"><a href="Shop Pages/Jewellry.html">Jewellry</a></p>
+            <p class="text4"><a href="Shop Pages/Wedding Kits.html">Wedding Kits</a></p>
+            <p class="text4"><a href="Shop Pages/Wedding Kits - Copy.html">Upcoming Products</a></p>
+        </div>
+    </div>
+</div>
+<script>
+jQuery(function($) {
+$('.navbar .dropdown').hover(function() {
+$(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+
+}, function() {
+$(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+});
+
+$('.navbar .dropdown > a').click(function(){
+location.href = this.href;
+});
+
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+a.ali {
+	text-decoration:none;
+	text-transform:uppercase;
+	color: #F9F;
+	font-size: 15px;}
+
+
+.row1{padding-bottom: 4%;
+    border-bottom: 1px solid gray;
+	margin-top:5%;
+	margin-bottom:5%;
+	}
+
+p{margin-top:2%;
+color: f9f;
+font-size:15px;
+	}

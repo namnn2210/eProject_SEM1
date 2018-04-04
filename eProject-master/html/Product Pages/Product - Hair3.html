@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hair 3</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../css/Product CSS/breadcumbs.css"/>
+<link rel="stylesheet" type="text/css" href="../../css/Product CSS/ImageCol.css"/>
+<script src="JS/jquery-1.8.3.min.js"></script>
+<script src="JS/jquery.elevatezoom.js"></script>
+<link rel="stylesheet" type="text/css" href="../Shop Pages/CSS/Homepage.css"/>
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/bootstrap-dropdownhover.min.css" rel="stylesheet">
+<script src="js/bootstrap-dropdownhover.min.js"></script>
+<script type="text/javascript" src="JS/productPageJs.js"></script>
+
+<script>
+$(document).ready(function(){
+  	var $content1 = $(".content1").hide();
+	var $content2 = $(".content2").hide();
+	var $content3 = $(".content3").hide();
+  	$(".toggleIcon1").on("click", function(e){
+		$(this).toggleClass("expanded");
+		$content1.slideToggle();
+  });
+   $(".toggleText1").on("click", function(e){
+		$(this).toggleClass("expanded");
+		$content1.slideToggle();
+  });
+	
+  	$(".toggleIcon2").on("click", function(e){
+		$(this).toggleClass("expanded");
+		$content2.slideToggle();
+  });
+	$(".toggleText2").on("click", function(e){
+		$(this).toggleClass("expanded");
+		$content2.slideToggle();
+  	});
+  	$(".toggleIcon3").on("click", function(e){
+		$(this).toggleClass("expanded");
+		$content3.slideToggle();
+  });
+	$(".toggleText3").on("click", function(e){
+		$(this).toggleClass("expanded");
+		$content3.slideToggle();
+  	});
+	
+});
+	
+	</script>
+</head>
+
+<!-- Header -->
+<header>
+	<nav class="navbar navbar-default">
+    	<div class="logo text-center">
+    		<a href="Homepage.html"><img src="../../Images/Logo/logo.png" width="150" height="150"/></a>
+    	</div>
+    	<div class="container">
+        	<div class="navbar-header">
+            	<button class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            	</button>
+            </div>
+            <div class="collapse navbar-collapse" id="navigation">
+            	<ul class="nav navbar-nav">
+                	<li class="nav1"><a href="../../Index.html" style="color:#CEA08A">Home</a></li>
+                    <li class="nav2 dropdown">
+                    	<a class="dropdown-toggle" data-toggle="dropdown"  data-hover="dropdown" data-animations="zoomIn" href="../Shop Pages/Wedding Kits - Copy (2).html">Shop</a>
+                        <ul class="dropdown-menu">
+                        	<li><a href="../Shop Pages/Hair.html">Hair</a></li>
+                            <li><a href="../Shop Pages/Skin.html">Skin</a></li>
+                            <li><a href="../Shop Pages/Makeup Kits.html">Makeup Kits</a></li>
+                            <li><a href="../Shop Pages/Nail Paints.html">Nail Paints</a></li>
+                            <li><a href="../Shop Pages/Nail Arts.html">Nail Arts</a></li>
+                            <li><a href="../Shop Pages/Jewellry.html">Jewellry</a></li>
+                            <li><a href="../Shop Pages/Wedding Kits.html">Wedding Kits</a></li>
+                            <li><a href="../Shop Pages/Wedding Kits - Copy.html">Upcoming Products</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav3"><a href="../Gallery + Feedback + Contact + About/Gallery.html">Gallery</a></li>
+                    <li class="nav4"><a href="../Gallery + Feedback + Contact + About/about.html">About</a></li>
+                    <li class="nav5"><a href="../Gallery + Feedback + Contact + About/contact.html">Contact</a></li>
+                    <li class="nav6"><a href="../Gallery + Feedback + Contact + About/feedsback.html">Feedback</a></li>
+                    <li class="nav7">
+                		<a href="../Shopping Cart.html"><button class="button-cart"><img src="../../Images/Others/Shopping-Cart-10.png" width="30" height="30"/></button></a>
+                    </li>
+                    <li class="cart">
+                    	<div class="cartCount"><a id="clicks">0</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+<div class="container container-body">
+	<div class="row">
+		<ul class="breadcrumb">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Shop</a></li>
+			<li id="currentPro">Hair 3</li>
+		</ul>
+	</div>
+	<div class="row">
+		<div class="col-lg-6" id="ImageCol">
+			<img id="zoom_09" src="IMG/small/hair3.jpg" style="width: 100%" data-zoom-image="IMG/large/hair3.jpg"/>
+			<p>I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.</p>
+		</div>
+		<div class="col-lg-6">
+			<h2 class="productName">Hair 3</h2>
+			<p class="productId">SKU: 0003</p>
+			<h4 class="price">$20</h4>
+			<h4 style="color: gray">Size</h4>
+			<select id="select2">
+  				  <option value="Small">Small</option>
+				  <option value="Medium">Medium</option>
+				  <option value="Big">Big</option>
+			</select>
+<!--
+			<select class="color" id="select">
+				<option class="color-yellow" value="1">Yellow</option>
+				<option class="color-green" value="2">Green</option>
+				<option class="color-red" value="3">Red</option>
+			</select>
+-->
+			<h4>Quantity</h4>
+			<input type="number" min="1" value="1" class="quantity" id="inCart"/><br>
+			<button type="submit" onClick="cart()" class="buy"><h4 style="font-weight: bold; color: white;">ADD TO CART</h4></button>
+			<hr/>
+			<div class="toggle">
+				<span class="toggleText toggleText1"><h4>Product Info</h4></span><span class="toggleIcon toggleIcon1"><h3 class="glyphicon glyphicon-plus"></h3></span>
+				<p class="content1">I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.
+</p>
+			</div>
+			<hr/>
+			<div class="toggle">
+				<span class="toggleText toggleText2"><h4>Refund Policy</h4></span><span class="toggleIcon toggleIcon2"><h3 class="glyphicon glyphicon-plus"></h3></span><p class="content2">I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.</p>
+			</div>
+			<hr/>
+			<div class="toggle">
+				<span class="toggleText toggleText3"><h4>Shipping Info</h4></span><span class="toggleIcon toggleIcon3"><h3 class="glyphicon glyphicon-plus"></h3></span><p class="content3">I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.</p>
+			</div>
+			<hr/>
+		</div>
+	</div>
+	<hr/>
+</div>
+
+<script>
+	$("#zoom_09").elevateZoom({
+			zoomType: "inner",
+  			cursor: "crosshair",
+            gallery : "gallery_09",
+            galleryActiveClass: "active"
+    	  		}); 
+     $("#select").change(function(e){
+   var currentValue = $("#select").val();
+   if(currentValue == 1){    
+   smallImage = 'IMG/small/image1.jpg';
+   largeImage = 'IMG/large/image1.jpg';
+   }
+   if(currentValue == 2){    
+   smallImage = 'http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image2.png';
+   largeImage = 'http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image2.jpg';
+   }
+   if(currentValue == 3){    
+   smallImage = 'http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image3.png';
+   largeImage = 'http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image3.jpg';
+   }
+   if(currentValue == 4){    
+   smallImage = 'http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image4.png';
+   largeImage = 'http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image4.jpg';
+   }
+//	// Example of using Active Gallery
+  $('#gallery_09 a').removeClass('active').eq(currentValue-1).addClass('active');		
+ 
+
+ 	 var ez =   $('#zoom_09').data('elevateZoom');	  
+   
+  ez.swaptheimage(smallImage, largeImage); 
+     
+    });
+	</script>
+<!-- Footer -->
+<footer>
+	<div class="container">
+	<div class="row footer1">
+    	<div class="col-lg-3">
+        	<p class="text4"><a href="../../Index.html" style="color:#CEA08A">Home</a></p>
+            <p class="text4"><a href="Wedding Kits - Copy (2).html">Shop</a></p>
+            <p class="text4"><a href="../Gallery + Feedback + Contact + About/Gallery.html">Gallery</a></p>
+            <p class="text4"><a href="../Gallery + Feedback + Contact + About/about.html">About</a></p>
+            <p class="text4"><a href="../Gallery + Feedback + Contact + About/contact.html">Contact</a></p>
+            <p class="text4"><a href="../Gallery + Feedback + Contact + About/feedsback.html">Feedback</a></p>
+            <p class="text4"><a href="#">Sitemap</a></p>
+        </div>
+        
+        <div class="col-lg-3">
+        	<div class="map">
+            
+            </div>
+            
+            <div class="opening-hours">
+            	<p>Opening Hours</p>
+                <p>Mon - Fri: 7am - 10pm</p>
+                <p>Saturday: 8am - 10pm</p>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 footer3">
+        	<p>Customer Service</p>
+            <p>T: 123-456-7890</p>
+            <p>F: 123-456-7890</p>
+            <p class="text4">Email:<a href="#">simplonbeautycare@gmail.com</a></p>
+        </div>
+        
+        <div class="col-lg-3">
+        	<p class="text4"><a href="#">FAQ</a></p>
+            <p class="text4"><a href="#">Shipping & Returns</a></p>
+            <p class="text4"><a href="#">Store Policy</a></p>
+            <div class="social">
+            	<p>Follow us on</p>
+            	<a href="https://www.facebook.com/"><img src="../../Images/Social/img1.png"/></a>
+                <a href="https://www.instagram.com/"><img src="../../Images/Social/img2.png"/></a>
+                <a href="https://www.pinterest.com/"><img src="../../Images/Social/img3.png"/></a>
+                <a href="https://plus.google.com/"><img src="../../Images/Social/img4.png"/></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="subscription">
+    	<p class="subscribe-text">Subscribe to our mailing list</p>
+        <div class="subscribe-input container">
+			<div class="row email-input">
+            	<div class="col-lg-3 input1">
+            		<span class="glyphicon glyphicon-envelope"></span>
+                	<input class="email-textbox" aria-label="Email" type="email" placeholder="Email"/>
+                </div>
+                <div class="email-button">
+                	<input class="email-button" type="button" value="Subscribe Now"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="text-center copyright">
+    	<p>Copyright 2017 <span class="glyphicon glyphicon-copyright-mark"></span> Simplon</p>
+    </div>
+</footer>
+
+</body>
+</html>

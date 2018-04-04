@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hair</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="CSS/Shop.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<link rel="stylesheet" type="text/css" href="CSS/Homepage.css"/>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="JS/search.js"></script>
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/bootstrap-dropdownhover.min.css" rel="stylesheet">
+<script src="js/bootstrap-dropdownhover.min.js"></script>
+  <script>
+	  $(function(){
+    $(".row-product").slice(0, 2).show(); // select the first ten
+    $("#loadMore").click(function(e){ // click event for load more
+        e.preventDefault();
+        $(".row-product:hidden").slice(0, 3).show(); // select next 10 hidden divs and show them
+        if($("div:hidden").length == 0){ // check if any hidden divs still exist
+//            alert("No more Product");
+			$("#loadMore").hide();
+        }
+    });
+});  
+</script>
+<script type="text/javascript">
+		var clicks = 0;
+		function cart(){
+			clicks += 1;
+			document.getElementById("clicks").innerHTML = clicks;
+		}
+</script>
+
+</head>
+
+<header>
+	<nav class="navbar navbar-default">
+    	<div class="logo text-center">
+    		<a href="Homepage.html"><img src="../../Images/Logo/logo.png" width="150" height="150"/></a>
+    	</div>
+    	<div class="container">
+        	<div class="navbar-header">
+            	<button class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            	</button>
+            </div>
+            <div class="collapse navbar-collapse" id="navigation">
+            	<ul class="nav navbar-nav">
+                	<li class="nav1"><a href="../../Index.html" style="color:#CEA08A">Home</a></li>
+                    <li class="nav2 dropdown">
+                    	<a class="dropdown-toggle" data-toggle="dropdown"  data-hover="dropdown" data-animations="zoomIn" href="Wedding Kits - Copy (2).html">Shop</a>
+                        <ul class="dropdown-menu">
+                        	<li><a href="Hair.html">Hair</a></li>
+                            <li><a href="Skin.html">Skin</a></li>
+                            <li><a href="Makeup Kits.html">Makeup Kits</a></li>
+                            <li><a href="Nail Paints.html">Nail Paints</a></li>
+                            <li><a href="Nail Arts.html">Nail Arts</a></li>
+                            <li><a href="Jewellry.html">Jewellry</a></li>
+                            <li><a href="Wedding Kits.html">Wedding Kits</a></li>
+                            <li><a href="Wedding Kits - Copy.html">Upcoming Products</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav3"><a href="../Gallery + Feedback + Contact + About/Gallery.html">Gallery</a></li>
+                    <li class="nav4"><a href="../Gallery + Feedback + Contact + About/about.html">About</a></li>
+                    <li class="nav5"><a href="../Gallery + Feedback + Contact + About/contact.html">Contact</a></li>
+                    <li class="nav6"><a href="../Gallery + Feedback + Contact + About/feedsback.html">Feedback</a></li>
+                    <li class="nav7">
+                		<a href="../Shopping Cart.html"><button class="button-cart"><img src="../../Images/Others/Shopping-Cart-10.png" width="30" height="30"/></button></a>
+                    </li>
+                    <li class="cart">
+                    	<div class="cartCount"><a id="clicks">0</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+<div class="container container-body">
+	<div class="search">
+		<input id="search" type="text" placeholder="Seach Product">
+	</div>
+	<div class="row row-product">
+		<div class="col-lg-4 img-row">
+			<div class="img">
+				<a href="../Product Pages/Product - Hair1.html"><img src="../../Images/Product Img/hair1.jpg"></a>
+				<div class="overlay">
+					<div class="text"><a onClick="cart()" href="#" style="text-decoration: none">Quick Buy</a></div>
+				</div>
+			</div>
+			<div class="productInfo">
+				<p class="productName">Hair 1</p>
+				<p class="price">20$</p>
+			</div>
+		</div>
+		<div class="col-lg-4 img-row">
+			<div class="img">
+				<a href="../Product Pages/Product - Hair2.html"><img src="../../Images/Product Img/hair2.jpg"></a>
+				<div class="overlay">
+					<div class="text"><a onClick="cart()" href="#" style="text-decoration: none">Quick Buy</a></div>
+				</div>		
+			</div>
+			<div class="productInfo">
+				<p class="productName">Hair 2</p>
+				<p class="price">20$</p>
+			</div>
+		</div>
+		<div class="col-lg-4 img-row">
+			<div class="img">
+				<a href="../Product Pages/Product - Hair3.html"><img src="../../Images/Product Img/hair3.jpg"></a>
+				<div class="overlay">
+					<div class="text"><a onClick="cart()" href="#" style="text-decoration: none">Quick Buy</a></div>
+				</div>
+			</div>
+			<div class="productInfo">
+				<p class="productName">Hair 3</p>
+				<p class="price">20$</p>
+			</div>
+			</div>
+		</div>
+	
+		
+		<div class="col-lg-12 load">
+			<button type="submit" id="loadMore">Load More</button>
+		</div>
+</div>
+
+<footer>
+	<div class="container">
+	<div class="row footer1">
+    	<div class="col-lg-3">
+        	<p class="text4"><a href="../../Index.html" style="color:#CEA08A">Home</a></p>
+            <p class="text4"><a href="Wedding Kits - Copy (2).html">Shop</a></p>
+            <p class="text4"><a href="../Gallery + Feedback + Contact + About/Gallery.html">Gallery</a></p>
+            <p class="text4"><a href="../Gallery + Feedback + Contact + About/about.html">About</a></p>
+            <p class="text4"><a href="../Gallery + Feedback + Contact + About/contact.html">Contact</a></p>
+            <p class="text4"><a href="../Gallery + Feedback + Contact + About/feedsback.html">Feedback</a></p>
+            <p class="text4"><a href="../Sitemap.html">Sitemap</a></p>
+        </div>
+        
+        <div class="col-lg-3">
+        	<div class="map">
+            
+            </div>
+            
+            <div class="opening-hours">
+            	<p>Opening Hours</p>
+                <p>Mon - Fri: 7am - 10pm</p>
+                <p>Saturday: 8am - 10pm</p>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 footer3">
+        	<p>Customer Service</p>
+            <p>T: 123-456-7890</p>
+            <p>F: 123-456-7890</p>
+            <p class="text4">Email:<a href="#">simplonbeautycare@gmail.com</a></p>
+        </div>
+        
+        <div class="col-lg-3">
+        	<p class="text4"><a href="#">FAQ</a></p>
+            <p class="text4"><a href="#">Shipping & Returns</a></p>
+            <p class="text4"><a href="#">Store Policy</a></p>
+            <div class="social">
+            	<p>Follow us on</p>
+            	<a href="https://www.facebook.com/"><img src="../../Images/Social/img1.png"/></a>
+                <a href="https://www.instagram.com/"><img src="../../Images/Social/img2.png"/></a>
+                <a href="https://www.pinterest.com/"><img src="../../Images/Social/img3.png"/></a>
+                <a href="https://plus.google.com/"><img src="../../Images/Social/img4.png"/></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="subscription">
+    	<p class="subscribe-text">Subscribe to our mailing list</p>
+        <div class="subscribe-input container">
+			<div class="row email-input">
+            	<div class="col-lg-3 input1">
+            		<span class="glyphicon glyphicon-envelope"></span>
+                	<input class="email-textbox" aria-label="Email" type="email" placeholder="Email"/>
+                </div>
+                <div class="email-button">
+                	<input class="email-button" type="button" value="Subscribe Now"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="text-center copyright">
+    	<p>Copyright 2017 <span class="glyphicon glyphicon-copyright-mark"></span> Simplon</p>
+    </div>
+</footer>
+</body>
+</html>

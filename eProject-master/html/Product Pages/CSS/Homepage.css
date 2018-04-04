@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Body */
+body {
+	font-family:Futura, "Trebuchet MS", Arial, sans-serif;	
+}
+
+.padding1 {
+	padding : 0 4% 0 4.5%;	
+}
+/* Header */
+.navbar-nav {
+	margin-left:8.5%;	
+}
+nav {
+	margin-left:25%;	
+}
+.nav2, .nav3, .nav4, .nav5, .nav6 {
+	margin-left:30px;
+}
+
+.nav1 a, .nav2 a, .nav3 a, .nav4 a, .nav5 a, .nav6 a {
+	text-transform: uppercase;
+    color: black;
+	font-size:20px;
+}
+
+header .navbar ul .nav1 a, header .navbar ul .nav2 a, header .navbar ul .nav3 a, header .navbar ul .nav4 a, header .navbar ul .nav5 a, header .navbar ul .nav6 a  {
+	background-color:transparent;	
+}
+.cart a img {
+	position: absolute;
+    left: 90%;	
+}
+
+.nav2:hover .dropdown-menu {
+	display: block;
+}
+
+.nav2 .dropdown-menu li a:hover {
+	color:#CEA08A;
+}
+
+.nav1 a:hover, .nav2 a:hover, .nav3 a:hover, .nav4 a:hover, .nav5 a:hover, .nav6 a:hover {
+	color:#CEA08A;	
+}
+/* Carousel */
+
+
+.text1 {
+	position: absolute;
+    top: 35%;
+    left: 35%;
+    font-size: 40px;
+    color: black;	
+}
+
+.text2 a {
+	position: absolute;
+    top: 50%;
+	left:45%;
+    color: black;
+    font-size: 25px;
+    border: 1px solid black;
+    text-decoration: none;
+	padding: 5px 7px 5px 7px;
+}
+
+.text2 a:hover {
+	background-color:white;
+	color:black;	
+}
+
+/* Trending */
+.trending-title {
+	padding-top:30px;	
+}
+
+.text3 {
+	font-weight: bold;
+    font-size: 45px;	
+}
+
+.trending-1,.trending-2 {
+	margin-left:10%;
+}
+.trending-1-title, .trending-2-title {
+	position: relative;
+    top: -580px;
+    left: 178px;
+}
+
+.trending-1-title p, .trending-2-title p {
+	font-size:50px;	
+}
+/* Main */
+
+.main-img-1, .main-img-2 {
+	display:inline-block;	
+}
+
+
+.main-1-title, .main-2-title {
+	position: relative;
+    top: -308px;
+    left: 150px;	
+}
+
+.main-1-title p, .main-2-title p {
+	font-size:20px;	
+}
+
+/* PR */
+.pr, footer {
+	margin-top:5%;	
+}
+
+.pr1, .pr2 {
+	border-right:1px solid grey;	
+}
+
+/* Footer */
+
+footer {
+	border-top:1px solid black;	
+}
+
+.footer1 {
+	margin-top:4%;
+}
+
+.text4 a {
+	text-decoration:none;
+	color:black;
+}
+
+/* Subscription */
+.subscription {
+	padding: 0 3% 3% 1%;
+}
+
+.subscribe-text {
+	margin-top: 60px;
+}
+
+.subscribe-input {
+	margin-top:20px;	
+}
+
+
+.email-textbox {
+	border:none;
+	width:230px;
+	height:40px;	
+}
+
+.email-textbox, .email-button {
+	display:inline-block;	
+}
+
+.email-button {
+	margin-left:5px;
+	width:230px;
+	height:40px;
+	border-width:1px;
+	background-color:transparent;
+	border-color:black;
+}
+
+.input1 {
+	border-bottom:1px solid black;	
+}
+
+/* Others */
+.text5 {
+	text-decoration:none;
+	color:black;	
+}
+
+
+
+
+

@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="GallerySoft.info" />
+
+	<title>Untitled 2</title>
+ 
+    <style>
+    .custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+    }
+    </style>
+</head>
+
+<body>
+<div class="container" >
+<div class="row col-md-6 col-md-offset-2 custyle" id="categori_detail">
+<table class="table table-striped custab">
+<thead>
+<a href="#" class="btn btn-primary btn-xs pull-right" id="add_category"><b>+</b> Add new categories</a>
+    <tr>
+        <th>ID</th>
+        <th>category code</th>
+        <th>category name </th>
+        <th>category des </th>
+        <th class="text-center">Action</th>
+    </tr>
+</thead>
+<tbody id="category_conten">
+</tbody>
+</table>
+</div>
+    
+<!--add category-->
+  <div class="row hidden-md hidden-lg" id="categori_edit">
+  <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+       <a href="#" id="back" >back</a>
+
+  </div>
+    <div class="col-md-6 col-md-offset-2 custyl" >
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">add category</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="./baby.jpg" class="img-circle img-responsive"> </div>
+            <div class=" col-md-9 col-lg-9 "> 
+              <table class="table table-user-information">
+                <tbody>
+                  <tr>
+                    <td>category name:</td>
+                    <td><input type="" id="category_name" placeholder="category name"  style="border: none;" required="" /></td>
+                  </tr>
+                  <tr>
+                    <td>category code:</td>
+                    <td><input type="" id="category_code" placeholder="category code"  style="border: none;" required="" /></td>
+                  </tr>
+                  <tr>
+                    <td>category description</td>
+                    <td><input type="" id="category_des" placeholder="category description"  style="border: none;"  /></td>
+                  </tr>
+                </tbody>
+              </table>  
+            </div>
+          </div>
+        </div>
+             <div class="panel-footer" style="text-align: center;">
+                    <button type="button" class="btn btn-warning btn-lg cat_edit" style="width: 70%;" id="category_add"  ><span class="glyphicon glyphicon-ok-sign"></span>ADD category</button>
+                    
+                </div>
+        
+      </div>
+    </div>
+  </div>
+<!--add category-->
+    <!--edit -->
+    <div class="row hidden-md hidden-lg" id="categori_edit1">
+      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+           <a href="#" id="back1" >back</a>
+
+      </div>
+        <div class="col-md-6 col-md-offset-2 custyl" >
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">edit category </h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="./baby.jpg" class="img-circle img-responsive"> </div>
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>category name:</td>
+                        <td><input type="" id="category_name1" placeholder="category name"  style="border: none;" required="" /></td>
+                      </tr>
+                      <tr>
+                        <td>category code:</td>
+                        <td><input type="" id="category_code1" placeholder="category code"  style="border: none;" required="" /></td>
+                      </tr>
+                      <tr>
+                        <td>category description</td>
+                        <td><input type="" id="category_des1" placeholder="category description"  style="border: none;"  /></td>
+                      </tr>
+                    </tbody>
+                  </table>  
+                </div>
+              </div>
+            </div>
+                 <div class="panel-footer" style="text-align: center;">
+                        <button type="button" class="btn btn-warning btn-lg cat_edit catt_eidt" style="width: 70%;" id=""  ><span class="glyphicon glyphicon-ok-sign"></span>EDIT category</button>
+                        
+                    </div>
+            
+          </div>
+        </div>
+      </div>
+    
+</div>
+<script>
+
+    $("#add_category").click(function(){
+        $("#categori_edit").removeClass("hidden-md hidden-lg");
+        $("#categori_detail").addClass("hidden-md hidden-lg");
+    });
+    $("#back").click(function(){
+        $("#categori_edit").addClass("hidden-md hidden-lg");
+        $("#categori_detail").removeClass("hidden-md hidden-lg");
+    });
+    
+    $("#category_add").click(function(){
+       
+        //localStorage.removeItem("category_new"); //xoa
+        var category_name = $("#category_name").val();
+        var category_code = $("#category_code").val();
+        var category_des = $("#category_des").val();
+        //alert(localStorage.getItem("category_tr"));
+        if(category_name !='' && category_code!='')
+        { 
+            var category_name = { "category_name":category_name,"category_code":category_code,"category_des":category_des};
+            
+            var storageCategory =localStorage.getItem("category_tr");
+            if(storageCategory == undefined)
+            {
+                var objectCategory={};
+                 objectCategory["category_tr"] =[category_name];
+                 console.log(objectCategory);
+                 objectCategory = JSON.stringify(objectCategory);
+                  localStorage.setItem('category_tr', objectCategory);
+                 //alert("them dc  1 cai roi");
+                
+            }else
+            {
+                 var storageCategory = JSON.parse(storageCategory);
+                 var flag=0;
+                 for(var item in storageCategory['category_tr']) {
+                    
+				   if(storageCategory['category_tr'][item].category_code == category_code)
+				   {
+					 flag=1;
+					 break;
+				   }
+                }
+                if(flag!=1)
+               {
+                storageCategory['category_tr'].push(category_name);
+                storageCategory = JSON.stringify(storageCategory);
+                localStorage.setItem("category_tr", storageCategory);
+				//alert("dang ky thanh cmn cong roi2");
+                load_data1();
+               }else
+               {
+                alert("ton tai code nay roi");
+               }
+            }
+                        
+                     
+        }else{
+            alert("code va name ko dc de trong");
+        }
+    });
+    if (typeof(Storage) !== "undefined") {
+                // show user on storage                
+                    var jsonStr = localStorage.getItem("category_tr");
+                   // console.log(jsonStr);
+                    var obj = JSON.parse(jsonStr);
+                    var i =1;
+                    for(var item in obj['category_tr']) {
+                         $('#category_conten').append(function() {
+                               var cont_us= '<tr>'
+                                    +'<td>'+ i++ +'</td>'
+                                    +'<td>'+obj['category_tr'][item].category_code +'</td>'
+                                    +'<td>'+obj['category_tr'][item].category_name +'</td>'
+                                    +'<td>'+obj['category_tr'][item].category_des +'</td>'
+                                    +'<td class="text-center"><a class="btn btn-info btn-xs category_edit" href="#" id="'+obj['category_tr'][item].category_code+'"><span class="glyphicon glyphicon-edit"></span> Edit</a> '
+                                    +'<a href="#" class="btn btn-danger btn-xs category_delete" id="'+obj['category_tr'][item].category_code+'"><span class="glyphicon glyphicon-remove"></span> Del</a></td>'
+                               +'</tr>' ;
+                             return cont_us;
+                        });
+                   }
+                }
+     // show edit detail
+      $(".category_edit").click(function(){
+        $("#categori_edit1").removeClass("hidden-md hidden-lg");
+        $("#categori_detail").addClass("hidden-md hidden-lg");
+       // $(".cat_edit").attr('id',"edit_catt");
+       var id =$(this).attr("id");
+       
+       $(".catt_eidt").attr('id',id);
+        
+         var jsonStr = localStorage.getItem("category_tr");
+                    var obj = JSON.parse(jsonStr);
+                     for(var item in obj['category_tr']) {
+                        if(obj['category_tr'][item].category_code==id ){
+                           $("#category_code1").val(obj['category_tr'][item].category_code);
+                           $("#category_name1").val(obj['category_tr'][item].category_name);
+                           $("#category_des1").val(obj['category_tr'][item].category_des);
+                        }
+                     }
+    });
+    //back1
+    $("#back1").click(function(){
+        $("#categori_edit1").addClass("hidden-md hidden-lg");
+        $("#categori_detail").removeClass("hidden-md hidden-lg");
+    });
+    //edit category
+    $(".catt_eidt").click(function(){
+      //  
+      var id =$(this).attr("id");
+      //alert(id);
+       var jsonStr = localStorage.getItem("category_tr");
+                    var obj = JSON.parse(jsonStr);
+                     for(var item in obj['category_tr']) {
+                        if(obj['category_tr'][item].category_code==id){
+                            obj['category_tr'][item].category_code=$("#category_code1").val();
+                            obj['category_tr'][item].category_name=$("#category_name1").val();
+                            obj['category_tr'][item].category_des=$("#category_des1").val();
+                            var jsonStr1 = JSON.stringify(obj);
+                            localStorage.setItem("category_tr", jsonStr1);
+                        }
+                        }
+                        load_data1(); 
+    });
+    //delete category
+    $(".category_delete").click(function(){
+        //localStorage.removeItem("category_new"); //xoa
+         var id=$(this).attr("id");
+        if(confirm("muon xoa khong") ==true)
+        {
+            var jsonStr = localStorage.getItem("category_tr");
+            var obj = JSON.parse(jsonStr);
+            
+            for (i=0;i<obj['category_tr'].length;i++){
+                
+                if (obj['category_tr'][i].category_code == id) 
+                {
+                    obj['category_tr'].splice(i,1);
+                    localStorage["category_tr"] = JSON.stringify(obj);
+                    load_data1();
+                }
+            }
+        }
+        
+        
+    });
+    //load data
+      function load_data1()
+        {
+            $.ajax({
+                url:"category.html",
+                method:"GET",
+                dataType: "html",
+                success:function(data){
+                    $('#div_user').html(data);        
+                }
+            })
+        }          
+</script>
+
+</body>
+</html>
